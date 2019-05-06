@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <title>How To Dos</title>
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <div id="navbar_placeholder"></div>
+
+  <br>
+  <div class="container-fluid">
+    <h1 class="display-1"><strong style="color:red">DoS ATTACKS ARE ILLEGAL</strong></h1>
+    <h3 style="color:darkred"><i>Not To Mention Usually Immoral...</i></h3>
+
+    <br>
+
+    <h1>No, Seriously</h1>
+    <p>DoS attacks are a federal crime under the Computer Fraud and Abuse Act (US) and the Police and Justice Act of 2006 (EU). Penalties include fines and multiple years in prision.
+
+    Even ignoring those, DoS attacks distrupt the lives of innocent users. This could lead to a serious loss of information and/or money, or even worse outcomes in more dire situations.</p>
+
+    <br>
+
+    <h1>So when is it okay to DoS?</h1>
+    <p>There are a few situations where it is okay to DoS:</p>
+
+    <h2>Stress Testing</h2>
+    <p>Among other techniques, groups may attempt to DoS their own website to see how much load it can handle, if their security is working, or how their servers behave under stress. Usually this is done on a non-live version of the service or when the service is down for maintenance.</p>
+
+    <h2>Research</h2>
+    <p>Researching the behavior of different technologies under stress or how to prevent DoS attacks is a very good reason to perform a DoS attack– if the service being DoS is the reasearchers or gives consent. It should go without saying, but DoS a random website without consent, even for research purposes, is still a harmful DoS attack.</p>
+
+    <h2>Protest</h2>
+    <p>DoS attacks have been used as a form of protest, with some arguing that they are analogous to a sit-in. Be warned, no government has yet to provide protections for any form of DoS protesting. DoS has been used to protest the following: French nuclear policy in 1995, the Iranian presidential election in 2009, the Brazilian government spending on the 2014 World Cup, and the Sudan government under Omar al-Bashir. Whether or not these protests were valid or illegal is up to the reader.</p>
+  </div>
+
+</html>
+
+<script>
+  $(function() {
+    $("#navbar_placeholder").load("{{ url_for('static', filename='html/navbar.html') }}")
+  })
+</script>
