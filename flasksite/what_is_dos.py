@@ -7,16 +7,8 @@ def dos_page():
 
 @app.route('/what-is-dos/buffer-overflow')
 def buffer_overflow_page():
-    return 'Buffer Overflow'
-
-@app.route('/what-is-dos/icmp-flood')
-def icmp_flood_page():
-    return 'ICMP Flood'
-
-@app.route('/what-is-dos/syn-flood')
-def syn_flood_page():
-    return 'SYN Flood'
+    return render_template('buffer-overflow.html')
 
 @app.route('/what-is-dos/ddos')
 def ddos_page():
-    return 'DDoS'
+    return render_template('ddos.html')
