@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <title>Buffer Overflow</title>
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <div id="navbar_placeholder"></div>
+
+  <br>
+  <div class="container-fluid">
+    <h1>What is a buffer overflow attack?</h1>
+    <p>A buffer overflow/overrun attack is the most common form of DoS attack and works by simply sending more traffic than the target service can handle. How that traffic is generated varies from implementation to implementation.</p>
+
+    <br>
+
+    <h2>Ping Flood</h2>
+    <p>A ping flood (also known as a ICMP flood) is one of the simplest implementations of a buffer overflow attack. The attacker pings the victim as fast as possible without waiting for replies in the hope that the victim will be too busy responding to pings to respond to legitimate users. This attack only works if the victim is slower than the attacker (making them unable to respond fast enough) and the victim's server is configured to always reply to pings.</p>
+
+    <br>
+
+    <h2>SYN Flood</h2>
+    <p>An attacker performs a SYN flood by requesting to connect to the victim, but never completing the connection after the victim responds. Since the connection is never completed, one of the victim's port is left on stand-by for the connection. The attacker continues to do this until all ports on the victim are in use, preventing legitimate users from connecting.</p>
+
+    <br>
+
+    <h2>Slowloris</h2>
+    <p>A slowloris attack is very similar to a SYN flood as both ask the victim for many connections. However, slowloris actually completes the connection. Instead of never completing the connection, slowloris attempts to keep a connection active for as long as possible. This is done by occasionally sending incomplete HTTP requests to the victim. Unlike SYN flood, the requests used in slowloris are legitimate, making it harder to detect.
+  </div>
+
+</html>
+
+<script>
+  $(function() {
+    $("#navbar_placeholder").load("{{ url_for('static', filename='html/navbar.html') }}")
+  })
+</script>

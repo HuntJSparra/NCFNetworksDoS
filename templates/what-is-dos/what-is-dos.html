@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <title>What Is DoS?</title>
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+  <div id="navbar_placeholder"></div>
+
+  <br>
+  <div class="container-fluid">
+    <h1>What is a Denial of Service attack?</h1>
+    <p>A Denial of Service (DoS) attack is exactly what it sounds like: an attack that aims to deny a service from its users. Typically, this means flooding a server until it cannot handle the traffic and effectively crashes. Another common method is exploting some vulnerability with the service.</p>
+    <br>
+    <br>
+    <h4>To learn more about a specific type of DoS attack, select one of the webpages below.</h4>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm" style="display:flex">
+        <div class="jumbotron">
+          <h1 class="display-4">Buffer Overflow</h1>
+          <p class="lead">A buffer overflow attack works by sending more requests than a server can actual handle.</p>
+          <hr class="my-4">
+          <p>Buffer overflow attacks are the most common type of DoS attack thanks to their ease of implementation.</p>
+          <a class="btn btn-primary btn-lg" href="what-is-dos/buffer-overflow" role="button">Learn more</a>
+        </div>
+      </div>
+      <div class="col-sm" style="display:flex">
+        <div class="jumbotron">
+          <h1 class="display-4">Distributed Denial of Service</h1>
+          <p class="lead">A DDoS attack is any DoS attack using multiple computers.</p>
+          <hr class="my-4">
+          <p>These attacks can be hard to block due to their decentralized nature.</p>
+          <a class="btn btn-primary btn-lg" href="what-is-dos/ddos" role="button">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</html>
+
+<script>
+  $(function() {
+    $("#navbar_placeholder").load("{{ url_for('static', filename='html/navbar.html') }}")
+  })
+</script>
