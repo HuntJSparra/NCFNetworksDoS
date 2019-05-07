@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <title>My Page</title>
+  <title>How To: Ping Flood</title>
 
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -13,8 +13,18 @@
 
   <br>
   <div class="container-fluid">
-    <h1>My header goes here</h1>
-    <p>My text goes here</p>
+    <h1>Ping Flood</h1>
+    <p>By sending as many pings as possible, an attacker with greater bandwidth use all of the victim's resources, preventing a legitimate user from connecting.</p>
+
+    <h2>Code</h2>
+    <h4>Unix Terminal</h4>
+    <code style="background: antiquewhite">sudo ping -f -s 8184 <var>{VICTIM IP}</var></code>
+    <p>...that's it</p>
+
+    <br>
+
+    <h2>Explaination</h2>
+    <p>On Unix devices, the ping command already comes with a flood option: "-f". Using this command request admin priviledges, thus sudo is also required unless the user is already the root. "-s" simply specifies the size of the packet. The larger the packet, the fewer packets are needed to consume all of the victim's bandwidth.</p>
   </div>
 
 </html>

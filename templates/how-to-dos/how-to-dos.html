@@ -25,7 +25,7 @@
 
     <br>
 
-    <h1>So when is it okay to DoS?</h1>
+    <h1>So, when is it okay to DoS?</h1>
     <p>There are a few situations where it is okay to DoS:</p>
 
     <h2>Stress Testing</h2>
@@ -36,6 +36,32 @@
 
     <h2>Protest</h2>
     <p>DoS attacks have been used as a form of protest, with some arguing that they are analogous to a sit-in. Be warned, no government has yet to provide protections for any form of DoS protesting. DoS has been used to protest the following: French nuclear policy in 1995, the Iranian presidential election in 2009, the Brazilian government spending on the 2014 World Cup, and the Sudan government under Omar al-Bashir. Whether or not these protests were valid or illegal is up to the reader.</p>
+
+    <br>
+
+    <h2>So, how do I DoS?</h2>
+    <p>If you are still interested in how DoSing works on a technical level, look at the implementations below:</p>
+
+    <div class="row">
+      <div class="col-sm" style="display:flex">
+        <div class="jumbotron">
+          <h1 class="display-4">Ping Flood</h1>
+          <p class="lead">A ping flood tries to overload the victim by pinging as fast as possible.</p>
+          <hr class="my-4">
+          <p>This is the easiest DoS attack to implement.</p>
+          <a class="btn btn-primary btn-lg" href="how-to-dos/ping-flood" role="button">Learn more</a>
+        </div>
+      </div>
+      <div class="col-sm" style="display:flex">
+        <div class="jumbotron">
+          <h1 class="display-4">Slowloris</h1>
+          <p class="lead">Slowloris works by attempting to use all available connections on a server, preventing legitimate users from connecting.</p>
+          <hr class="my-4">
+          <p>Slowloris is terrifyingly effective and hard to midigate despite its ease of implementation.</p>
+          <a class="btn btn-primary btn-lg" href="how-to-dos/slowloris" role="button">Learn more</a>
+        </div>
+      </div>
+    </div>
   </div>
 
 </html>
