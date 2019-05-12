@@ -16,7 +16,20 @@
 
   	<p>As we saw earlier</p>
 
-    <p bgcolor="#F0F0F0">A ping flood (also known as a ICMP flood) is one of the simplest implementations of a buffer overflow attack. The attacker pings the victim as fast as possible without waiting for replies in the hope that the victim will be too busy responding to pings to respond to legitimate users. This attack only works if the victim is slower than the attacker (making them unable to respond fast enough) and the victim's server is configured to always reply to pings.</p>
+    <div style="background-color: #F0F0F0" bgcolor="#F0F0F0">A ping flood (also known as a ICMP flood) is one of the simplest implementations of a buffer overflow attack. The attacker pings the victim as fast as possible without waiting for replies in the hope that the victim will be too busy responding to pings to respond to legitimate users. This attack only works if the victim is slower than the attacker (making them unable to respond fast enough) and the victim's server is configured to always reply to pings.</div>
+    <br>
+    <p>So if we want to stop ping flood attacks we can do one of three things.</p>
+
+    <ul>
+    	<li>Disable ICMP</li>
+    	<p>Going with this option isn't the greatest because a good internet citizen should respond to ICMP requests. However if your website is constantly being taken down then this is a good option.</p>
+    	<li>Have more Bandwidth</li>
+    	<p>Since Ping attacks require that the attacker(s) have more bandwidth than you then if you simply have more bandwidth than them your website won't go down.</p>
+    	<li>Hire someone like CloudFlare</li>
+    	<p>This option is actually the same thing the previous option but what CloudFlare can do is handle all the ICMP for you. Meaning that if someone is trying to take down your website through a ping flood attack they need to take down CloudFlare which is really difficult.</p>
+    </ul>
+
+    
 
 
   </div>
