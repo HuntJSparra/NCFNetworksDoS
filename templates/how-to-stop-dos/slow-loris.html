@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <title>How to stop a Ping Flood</title>
+  <title>How to stop a Slowloris attack</title>
 
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -13,7 +13,25 @@
 
   <br>
   <div class="container-fluid">
-  	<p> This is the slow loris prevention page</p>
+  	<p>As we saw <a href="/what-is-dos/buffer-overflow">earlier</a></p>
+
+    <div style="background-color: #F0F0F0" bgcolor="#F0F0F0">A Slowloris attack is very similar to a SYN flood as both ask the victim for many connections. However, Slowloris actually completes the connection. Instead of never completing the connection, Slowloris attempts to keep a connection active for as long as possible. This is done by occasionally sending incomplete HTTP requests to the victim. Unlike SYN flood, the requests used in Slowloris are legitimate, making it harder to detect.</div>
+    <br>
+    <p>So if we want to stop Slowloris attacks we can do one of three things.</p>
+
+    <ul>
+      <li>Increase server availability</li>
+      <p>Increasing the server's availability will allow more users to connect. Realisticlly though an attacker will just increase the number of connections they hold because Slowloris attacks don't require much bandwidth on the attacker's side.</p>
+      <li>Rate Limiting</li>
+      <p>There's a few options here. First up is to limit the maximum number of connections a single IP address can have. This stops Slowloris attacks immediately because this stops attackers from grabbing more than the number of connnections you specify.</p>
+      <li>Hire someone like CloudFlare</li>
+      <p>CloudFlare acts like a reverse proxy in this instance. A reverse proxy acts like a middleman similar to how a regular proxy works however when a user wants to interact with a server they talk to it through the proxy server.</p>
+    </ul>
+
+
+
+
+
   </div>
 </html>
 <script>
