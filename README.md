@@ -8,7 +8,7 @@ We created this project with a joke in mind, "What if we created a website which
 We built this project with Flask in Python and some simple HTML.
 
 # How to run
-1) You'll need Python and Flask to run this project. 
-1) You can download Python from https://www.python.org/. You'll need Python 3.4 or newer
-1) You also need to install Flask since that's what our server runs on. You can find how to install it at https://pypi.org/project/Flask/
-1) Run start.sh and it should work
+I was unable to run the server on Windows however I was able to get it to run within a Linux VM. So lets talk about how to do that
+1) Install python3 `apt install python3'
+1) Install flask `apt install python3-flask`
+1) Run the server with `bash start.sh`
